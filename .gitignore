@@ -1,1 +1,12 @@
-origin/main
+.DS_Store
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub/
+.pub-cache/
+build/
+coverage/
+.idea/
+*.iml
+.vscode/
+*.log
