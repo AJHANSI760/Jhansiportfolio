@@ -2,24 +2,40 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jhansi_portfolio_new/main.dart';
 
 void main() {
-  testWidgets('Portfolio displays the application title', (
+  testWidgets('Portfolio displays the introduction', (
     WidgetTester tester,
   ) async {
     await tester.pumpWidget(const JhansiPortfolio());
 
     expect(find.text('A JHANSI'), findsOneWidget);
     expect(find.text('HELLO, WORLD! I AM'), findsOneWidget);
-  });
-
-  testWidgets('Portfolio displays its introduction and sections', (
-    WidgetTester tester,
-  ) async {
-    await tester.pumpWidget(const JhansiPortfolio());
-
     expect(
       find.text('Computer Science Student  |  AI & Software Development'),
       findsOneWidget,
     );
-    expect(find.text('01 / ABOUT ME'), findsOneWidget);
+  });
+
+  testWidgets('Portfolio displays project cards', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const JhansiPortfolio());
+
+    expect(find.text('V2V Vehicle Collision Alert'), findsOneWidget);
+    expect(find.text('Digital Certificate Verification'), findsOneWidget);
+    expect(find.text('Mini E-Commerce Web Project'), findsOneWidget);
+    expect(find.text('Android Dice Roller'), findsOneWidget);
+  });
+
+  testWidgets('Portfolio displays contact options', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const JhansiPortfolio());
+
+    await tester.ensureVisible(find.text('LinkedIn'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Let’s build something meaningful.'), findsOneWidget);
+    expect(find.text('LinkedIn'), findsOneWidget);
+    expect(find.text('GitHub'), findsOneWidget);
   });
 }
