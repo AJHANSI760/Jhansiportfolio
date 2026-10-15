@@ -120,3 +120,22 @@ Jhansiportfolio/
 ---
 
 Built with Flutter and Dart.
+
+## Key Features
+
+- Responsive Flutter portfolio for desktop and mobile screens.
+- Introduction and education details.
+- Technical skills and project showcase.
+- Experience and achievements.
+- Contact links for GitHub and LinkedIn.
+
+## Quality Checks
+
+Run these commands from the project directory before publishing changes:
+
+```bash
+flutter analyze
+flutter test
+```
+
+Both commands should complete successfully before publishing updates.
