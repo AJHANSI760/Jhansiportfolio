@@ -224,17 +224,20 @@ class _PortfolioHomeState extends State<PortfolioHome> {
                   spacing: 12,
                   runSpacing: 12,
                   children: [
-                    FilledButton(
-                      style: FilledButton.styleFrom(
-                        backgroundColor: cyan,
-                        foregroundColor: navy,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 24,
-                          vertical: 18,
+                    Tooltip(
+                      message: 'Jump to the projects section',
+                      child: FilledButton(
+                        style: FilledButton.styleFrom(
+                          backgroundColor: cyan,
+                          foregroundColor: navy,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 24,
+                            vertical: 18,
+                          ),
                         ),
+                        onPressed: () => _goTo(projectsKey),
+                        child: const Text('Explore My Portfolio'),
                       ),
-                      onPressed: () => _goTo(projectsKey),
-                      child: const Text('Explore My Portfolio'),
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
