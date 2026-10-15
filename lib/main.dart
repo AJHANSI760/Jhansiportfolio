@@ -105,14 +105,9 @@ class _PortfolioHomeState extends State<PortfolioHome> {
     bool wide,
   ) {
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: wide ? 56 : 20,
-        vertical: 20,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: wide ? 56 : 20, vertical: 20),
       decoration: const BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: Color(0x223D6078)),
-        ),
+        border: Border(bottom: BorderSide(color: Color(0x223D6078))),
       ),
       child: Row(
         children: [
@@ -145,12 +140,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
               icon: const Icon(Icons.menu, color: cyan),
               onSelected: (name) => _goTo(sections[name]!),
               itemBuilder: (context) => sections.keys
-                  .map(
-                    (name) => PopupMenuItem(
-                      value: name,
-                      child: Text(name),
-                    ),
-                  )
+                  .map((name) => PopupMenuItem(value: name, child: Text(name)))
                   .toList(),
             ),
         ],
@@ -203,21 +193,13 @@ class _PortfolioHomeState extends State<PortfolioHome> {
                 const SizedBox(height: 18),
                 const Text(
                   'Computer Science Student  |  AI & Software Development',
-                  style: TextStyle(
-                    color: cyan,
-                    fontSize: 17,
-                    height: 1.6,
-                  ),
+                  style: TextStyle(color: cyan, fontSize: 17, height: 1.6),
                 ),
                 const SizedBox(height: 18),
                 const Text(
                   'Exploring ideas, writing code, and building technology '
                   'that solves real-world problems.',
-                  style: TextStyle(
-                    color: muted,
-                    fontSize: 15,
-                    height: 1.8,
-                  ),
+                  style: TextStyle(color: muted, fontSize: 15, height: 1.8),
                 ),
                 const SizedBox(height: 30),
                 Wrap(
@@ -256,21 +238,16 @@ class _PortfolioHomeState extends State<PortfolioHome> {
               ],
             ),
           ),
-          if (wide)
-            const SizedBox(width: 60)
-          else
-            const SizedBox(height: 42),
+          if (wide) const SizedBox(width: 60) else const SizedBox(height: 42),
           Expanded(
             flex: wide ? 4 : 0,
             child: Container(
               width: wide ? null : 300,
-              height: 340,
+              height: 420,
               decoration: BoxDecoration(
                 color: panel,
                 borderRadius: BorderRadius.circular(28),
-                border: Border.all(
-                  color: const Color(0x5548E5F0),
-                ),
+                border: Border.all(color: const Color(0x5548E5F0)),
                 boxShadow: const [
                   BoxShadow(
                     color: Color(0x2248E5F0),
@@ -279,33 +256,38 @@ class _PortfolioHomeState extends State<PortfolioHome> {
                   ),
                 ],
               ),
+
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.person_outline,
-                    size: 100,
-                    color: cyan,
-                  ),
-                  SizedBox(height: 18),
+                  Icon(Icons.blur_circular_rounded, size: 104, color: cyan),
+                  SizedBox(height: 22),
                   Text(
-                    'MY CREATIVE SPACE',
+                    'SOFTWARE  •  AI / ML',
                     style: TextStyle(
                       color: cyan,
-                      letterSpacing: 3,
+                      letterSpacing: 2,
                       fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  Text(
+                    'Ideas into innovation.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(height: 12),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 25),
                     child: Text(
-                      'My illustrated presenter will be added here next.',
+                      'Exploring software engineering, intelligent systems, and practical projects.',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: muted,
-                        height: 1.6,
-                      ),
+                      style: TextStyle(color: muted, height: 1.7),
                     ),
                   ),
                 ],
@@ -327,10 +309,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
     return Container(
       key: key,
       width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        horizontal: wide ? 100 : 24,
-        vertical: 65,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: wide ? 100 : 24, vertical: 65),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -348,11 +327,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
             constraints: const BoxConstraints(maxWidth: 780),
             child: Text(
               description,
-              style: const TextStyle(
-                color: muted,
-                height: 1.9,
-                fontSize: 16,
-              ),
+              style: const TextStyle(color: muted, height: 1.9, fontSize: 16),
             ),
           ),
         ],
@@ -361,102 +336,84 @@ class _PortfolioHomeState extends State<PortfolioHome> {
   }
 
   Widget _education(GlobalKey key, bool wide) {
-    return _cardSection(
-      key,
-      '02 / EDUCATION',
-      'My learning journey',
-      [
-        _infoCard(
-          'B.Tech — Computer Science & Engineering',
-          'ACE Engineering College, Telangana',
-          '2024 – 2028  •  CGPA: 8.2/10',
-          Icons.school_outlined,
-        ),
-        _infoCard(
-          'Intermediate — MPC',
-          'Mahatma Jyotiba Phule Residential Junior College',
-          '2022 – 2024  •  74%',
-          Icons.menu_book_outlined,
-        ),
-        _infoCard(
-          'SSC',
-          'Mahatma Jyotiba Phule Residential School',
-          '2022  •  93%',
-          Icons.auto_stories_outlined,
-        ),
-      ],
-      wide,
-    );
+    return _cardSection(key, '02 / EDUCATION', 'My learning journey', [
+      _infoCard(
+        'B.Tech — Computer Science & Engineering',
+        'ACE Engineering College, Telangana',
+        '2024 – 2028  •  CGPA: 8.2/10',
+        Icons.school_outlined,
+      ),
+      _infoCard(
+        'Intermediate — MPC',
+        'Mahatma Jyotiba Phule Residential Junior College',
+        '2022 – 2024  •  74%',
+        Icons.menu_book_outlined,
+      ),
+      _infoCard(
+        'SSC',
+        'Mahatma Jyotiba Phule Residential School',
+        '2022  •  93%',
+        Icons.auto_stories_outlined,
+      ),
+    ], wide);
   }
 
   Widget _skills(GlobalKey key, bool wide) {
-    return _cardSection(
-      key,
-      '03 / SKILLS',
-      'Technologies I am learning',
-      [
-        _infoCard(
-          'Programming',
-          'Java • C • Python basics',
-          '',
-          Icons.code_rounded,
-        ),
-        _infoCard(
-          'Web Development',
-          'HTML • CSS • JavaScript',
-          '',
-          Icons.web_rounded,
-        ),
-        _infoCard(
-          'AI & Data',
-          'AI/ML concepts • Data Analytics',
-          '',
-          Icons.memory_rounded,
-        ),
-        _infoCard(
-          'Tools',
-          'Git • GitHub • VS Code • Flutter',
-          '',
-          Icons.build_outlined,
-        ),
-      ],
-      wide,
-    );
+    return _cardSection(key, '03 / SKILLS', 'Technologies I am learning', [
+      _infoCard(
+        'Programming',
+        'Java • C • Python basics',
+        '',
+        Icons.code_rounded,
+      ),
+      _infoCard(
+        'Web Development',
+        'HTML • CSS • JavaScript',
+        '',
+        Icons.web_rounded,
+      ),
+      _infoCard(
+        'AI & Data',
+        'AI/ML concepts • Data Analytics',
+        '',
+        Icons.memory_rounded,
+      ),
+      _infoCard(
+        'Tools',
+        'Git • GitHub • VS Code • Flutter',
+        '',
+        Icons.build_outlined,
+      ),
+    ], wide);
   }
 
   Widget _projects(GlobalKey key, bool wide) {
-    return _cardSection(
-      key,
-      '04 / PROJECTS',
-      'Things I have built',
-      [
-        _infoCard(
-          'V2V Vehicle Collision Alert',
-          'A vehicle-to-vehicle safety concept focused on real-time collision warnings.',
-          'Systems • Safety',
-          Icons.directions_car_outlined,
-        ),
-        _infoCard(
-          'Digital Certificate Verification',
-          'A certificate verification concept using QR codes and database records.',
-          'Verification • Database',
-          Icons.verified_outlined,
-        ),
-        _infoCard(
-          'Mini E-Commerce Web Project',
-          'A responsive web development project built with HTML, CSS, and JavaScript.',
-          'HTML • CSS • JavaScript',
-          Icons.shopping_bag_outlined,
-        ),
-        _infoCard(
-          'Android Dice Roller',
-          'A simple mobile app project built while learning Android development.',
-          'Android • Mobile',
-          Icons.phone_android_outlined,
-        ),
-      ],
-      wide,
-    );
+    return _cardSection(key, '04 / PROJECTS', 'Things I have built', [
+      _infoCard(
+        'V2V Vehicle Collision Alert',
+        'A vehicle-to-vehicle safety concept focused on real-time collision warnings.',
+        'Systems • Safety',
+        Icons.directions_car_outlined,
+      ),
+      _infoCard(
+        'Digital Certificate Verification',
+        'A certificate verification concept using QR codes and database records.',
+        'Verification • Database',
+        Icons.verified_outlined,
+      ),
+      _infoCard(
+        'Mini E-Commerce Web Project',
+        'A responsive web development project built with HTML, CSS, and JavaScript.',
+        'HTML • CSS • JavaScript',
+        Icons.shopping_bag_outlined,
+      ),
+      _infoCard(
+        'Android Dice Roller',
+        'A simple mobile app project built while learning Android development.',
+        'Android • Mobile',
+        Icons.phone_android_outlined,
+      ),
+    ], wide);
   }
 
   Widget _experience(GlobalKey key, bool wide) {
@@ -492,17 +449,12 @@ class _PortfolioHomeState extends State<PortfolioHome> {
     return Container(
       key: key,
       width: double.infinity,
-      margin: EdgeInsets.symmetric(
-        horizontal: wide ? 72 : 20,
-        vertical: 30,
-      ),
+      margin: EdgeInsets.symmetric(horizontal: wide ? 72 : 20, vertical: 30),
       padding: const EdgeInsets.all(32),
       decoration: BoxDecoration(
         color: panel,
         borderRadius: BorderRadius.circular(24),
-        border: Border.all(
-          color: const Color(0x5548E5F0),
-        ),
+        border: Border.all(color: const Color(0x5548E5F0)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -511,19 +463,13 @@ class _PortfolioHomeState extends State<PortfolioHome> {
           const SizedBox(height: 18),
           const Text(
             'Let’s build something meaningful.',
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 14),
           const Text(
             'Interested in software development, AI/ML, or internship opportunities? '
             'Connect with me through my professional profiles.',
-            style: TextStyle(
-              color: muted,
-              height: 1.8,
-            ),
+            style: TextStyle(color: muted, height: 1.8),
           ),
           const SizedBox(height: 22),
           Wrap(
@@ -537,10 +483,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
                     final uri = Uri.parse(
                       'https://www.linkedin.com/in/jhansi-a-b1273a327/',
                     );
-                    await launchUrl(
-                      uri,
-                      mode: LaunchMode.externalApplication,
-                    );
+                    await launchUrl(uri, mode: LaunchMode.externalApplication);
                   },
                   icon: const Icon(Icons.link),
                   label: const Text('LinkedIn'),
@@ -550,13 +493,8 @@ class _PortfolioHomeState extends State<PortfolioHome> {
                 message: 'Open GitHub profile',
                 child: OutlinedButton.icon(
                   onPressed: () async {
-                    final uri = Uri.parse(
-                      'https://github.com/AJHANSI760',
-                    );
-                    await launchUrl(
-                      uri,
-                      mode: LaunchMode.externalApplication,
-                    );
+                    final uri = Uri.parse('https://github.com/AJHANSI760');
+                    await launchUrl(uri, mode: LaunchMode.externalApplication);
                   },
                   icon: const Icon(Icons.code),
                   label: const Text('GitHub'),
@@ -579,10 +517,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
     return Container(
       key: key,
       width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        horizontal: wide ? 72 : 20,
-        vertical: 55,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: wide ? 72 : 20, vertical: 55),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -624,9 +559,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
       decoration: BoxDecoration(
         color: panel,
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(
-          color: const Color(0x223F617C),
-        ),
+        border: Border.all(color: const Color(0x223F617C)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -635,28 +568,13 @@ class _PortfolioHomeState extends State<PortfolioHome> {
           const SizedBox(height: 18),
           Text(
             title,
-            style: const TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.bold,
-            ),
+            style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
-          Text(
-            description,
-            style: const TextStyle(
-              color: muted,
-              height: 1.7,
-            ),
-          ),
+          Text(description, style: const TextStyle(color: muted, height: 1.7)),
           if (detail.isNotEmpty) ...[
             const SizedBox(height: 13),
-            Text(
-              detail,
-              style: const TextStyle(
-                color: cyan,
-                fontSize: 12,
-              ),
-            ),
+            Text(detail, style: const TextStyle(color: cyan, fontSize: 12)),
           ],
         ],
       ),
@@ -679,9 +597,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
     final targetContext = key.currentContext;
 
     if (targetContext == null) {
-      debugPrint(
-        'Navigation failed: target section is not mounted.',
-      );
+      debugPrint('Navigation failed: target section is not mounted.');
       return;
     }
 
