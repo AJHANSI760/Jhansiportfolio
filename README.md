@@ -168,3 +168,13 @@ flutter test
 Run `flutter analyze` and `flutter test` to check code quality and verify the widget tests.
 
 Both commands should complete successfully before publishing updates.
+## Maintenance Checklist
+
+Before each portfolio update:
+
+- [ ] Review project descriptions and links.
+- [ ] Verify GitHub and LinkedIn links.
+- [ ] Run `flutter analyze`.
+- [ ] Run `flutter test`.
+- [ ] Review the portfolio in Chrome at desktop and mobile widths.
+- [ ] Commit and push verified changes.
