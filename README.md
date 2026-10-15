@@ -23,6 +23,12 @@ A responsive personal portfolio built with **Flutter** and **Dart** to showcase 
   </a>
 </p>
 
+## Mobile Preview
+
+<p align="center">
+  <img src="docs/screenshots/portfolio-mobile.png" alt="Mobile screenshot of the A JHANSI Flutter portfolio" width="320">
+</p>
+
 ## About Me
 
 I am a Computer Science and Engineering undergraduate at ACE Engineering College, Telangana, graduating in 2028. My interests include software development, Artificial Intelligence and Machine Learning, computer vision, and innovative technology.
