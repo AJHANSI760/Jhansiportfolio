@@ -38,4 +38,20 @@ void main() {
     expect(find.text('LinkedIn'), findsOneWidget);
     expect(find.text('GitHub'), findsOneWidget);
   });
+
+  testWidgets('Portfolio displays education and skills', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const JhansiPortfolio());
+
+    expect(find.text('02 / EDUCATION'), findsOneWidget);
+    expect(
+      find.text('B.Tech — Computer Science & Engineering'),
+      findsOneWidget,
+    );
+    expect(find.text('Intermediate — MPC'), findsOneWidget);
+    expect(find.text('03 / SKILLS'), findsOneWidget);
+    expect(find.text('Programming'), findsOneWidget);
+    expect(find.text('Web Development'), findsOneWidget);
+  });
 }
