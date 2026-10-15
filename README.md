@@ -125,7 +125,13 @@ Built with Flutter and Dart.
 
 - Responsive Flutter portfolio for desktop and mobile screens.
 - Introduction and education details.
-- Technical skills and project showcase.
+- Technical skills and project showcase.cd "$HOME/Documents/jhansi_portfolio_new" || exit 1
+git diff --check || exit 1
+git add README.md
+git commit -m "Add portfolio setup instructions" || exit 1
+git push origin main || exit 1
+git rev-list --count HEAD
+git status -sb
 - Experience and achievements.
 - Contact links for GitHub and LinkedIn.
 
@@ -137,5 +143,28 @@ Run these commands from the project directory before publishing changes:
 flutter analyze
 flutter test
 ```
+## Getting Started
+
+### Prerequisites
+
+- Flutter SDK installed
+- Dart SDK included with Flutter
+- Git installed
+
+### Setup
+
+1. Clone the repository.
+2. Open the project directory in Terminal.
+3. Install dependencies:
+
+   `flutter pub get`
+
+4. Run the portfolio locally:
+
+   `flutter run -d chrome`
+
+### Before Contributing
+
+Run `flutter analyze` and `flutter test` to check code quality and verify the widget tests.
 
 Both commands should complete successfully before publishing updates.
