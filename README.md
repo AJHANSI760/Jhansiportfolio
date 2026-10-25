@@ -155,7 +155,7 @@ flutter test
 
 1. Clone the repository.
 2. Open the project directory in Terminal.
-3. Install dependencies:
+3. Install dependencies: >>
 
    `flutter pub get`
 
